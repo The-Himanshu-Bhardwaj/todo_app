@@ -1,17 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:lottie/lottie.dart';
 import 'package:provider/provider.dart';
 import 'package:todo_app/pages/add_note/add_note_page.dart';
 import 'package:todo_app/pages/home/provider/home_provider.dart';
 import 'package:todo_app/pages/home/widgets/add_note_fab.dart';
 import 'package:todo_app/pages/home/widgets/empty_state_widget.dart';
 import 'package:todo_app/pages/home/widgets/notes_list.dart';
-import 'package:todo_app/util/show_toast.dart';
-
-import '../../util/app_colors.dart';
-import '../../util/strings.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -24,7 +18,9 @@ class _HomePageState extends State<HomePage> {
   @override
   void initState() {
     super.initState();
-    context.read<HomeProvider>().populateNotes();
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      context.read<HomeProvider>().populateNotes();
+    });
   }
 
   @override
