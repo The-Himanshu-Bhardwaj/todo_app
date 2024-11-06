@@ -28,7 +28,6 @@ class CustomTextFields extends StatelessWidget {
           style: const TextStyle(fontFamily: SANS_BOLD, fontSize: 15, color: Color(AppColors.RICH_BLACK)),
           decoration: InputDecoration(
               contentPadding: const EdgeInsets.all(14),
-              // errorText: _validate.value && _customerName.text.isEmpty ? 'Customer Name Cannot Be Empty' : null,
               errorText: null,
               hintText: '',
               hintStyle: const TextStyle(color: Colors.black38, fontSize: 14),
