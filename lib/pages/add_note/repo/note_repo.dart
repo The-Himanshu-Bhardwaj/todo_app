@@ -1,5 +1,4 @@
 import 'package:todo_app/database/model/note_model.dart';
-
 import '../../../database/floor/database.dart';
 
 class NoteRepo {

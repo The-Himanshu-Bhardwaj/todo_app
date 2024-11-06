@@ -4,7 +4,6 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:todo_app/pages/add_note/repo/note_repo.dart';
 import 'package:todo_app/pages/add_note/widgets/add_note_button.dart';
 import 'package:todo_app/util/show_toast.dart';
-
 import 'widgets/custom_text_field.dart';
 
 class AddNotePage extends StatefulWidget {
